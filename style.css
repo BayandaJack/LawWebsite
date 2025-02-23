@@ -287,4 +287,35 @@ footer {
     object-fit: cover;
 }
 
+#legalproblem {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical; /* Allows resizing but not too aggressively */
+}
+
+.contact-btn {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.contact-btn:hover {
+    background-color: #0056b3;
+}
+
+.contact-btn:active {
+    transform: scale(0.98);
+}
 
