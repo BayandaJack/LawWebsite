@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors()); // Enable CORS if frontend is on a different domain
 
 // POST endpoint to handle form submission
-app.post('/send-email', async (req, res) => {
+app.post('/#contactUs', async (req, res) => {
   const { name, email, message } = req.body;
 
   // Configure Nodemailer (using Gmail SMTP)
