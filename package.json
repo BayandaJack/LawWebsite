@@ -1,0 +1,26 @@
+{
+  "name": "law-webapp",
+  "version": "1.0.0",
+  "description": "A website for Jack Attorneys Inc. Made by me of course",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://BayandaJack@github.com/BayandaJack/LawWebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BayandaJack/LawWebsite/issues"
+  },
+  "homepage": "https://github.com/BayandaJack/LawWebsite#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "nodemailer": "^6.10.0"
+  }
+}

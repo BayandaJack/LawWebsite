@@ -89,23 +89,27 @@
             </div>
         </section>
         <section>
-            <form action="http://localhost:3000/send-email" method="POST">
-            <h1>Contact Us</h1>
-            <div id="contactUs" class="contactUs">
-                <div class="outerContainer">
-                    <h3>Name:</h3>
-                    <input type="text" id="userName" placeholder="Enter name here">
-                    <h3>Email:</h3>
-                    <input type="email" id="userEmail" placeholder="Enter your email here">
-                    <h3>Tell us your legal issue:</h3>
-                    <textarea name="legaltext" id="legalproblem">
+            <form id="contact-form" action="http://localhost:3000/send-email" method="post">
+                <h1>Contact Us</h1>
+                <div id="contactUs" class="contactUs">
+                    <div class="outerContainer">
+                        <h3>Name:</h3>
+                        <input type="text" id="userName" name="name" placeholder="Enter name here" required>
+                        
+                        <h3>Contact Number:</h3>
+                        <input type="text" id="userNumber" name="cellno" placeholder="Enter your cellnumber here" required>
 
-                    </textarea>
-                    <button type="submit" id="formButton" class="contact-btn">Send Message</button>
+                        <h3>Email:</h3>
+                        <input type="email" id="userEmail" name="email" placeholder="Enter your email here" required>
+                        
+                        <h3>Tell us your legal issue:</h3>
+                        <textarea name="message" id="legalproblem" required></textarea>
+                        
+                        <button type="submit" id="formButton" class="contact-btn">Send Message</button>
+                    </div>
+                    <img src="./legal_issue_pic.jpg" alt="A court hammer">
                 </div>
-                <img src="./legal_issue_pic.jpg" alt="A court hammer">
-            </div>
-        </form>
+            </form>
         </section>
         <footer>
             <p>© 2025 Jack Attorneys Inc. All rights reserved.</p>
