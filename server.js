@@ -8,9 +8,9 @@ app.use(express.urlencoded({ extended: true })); // For HTML form submissions
 
 // POST endpoint
 app.post('/send-email', async (req, res) => {
-  const { name, cellno, email, message } = req.body; // Destructure from req.body
+  const { name, cellno, email, legalproblem } = req.body; // Destructure from req.body
   //console.log('Received data:', { name, email, message });
-  if (!name || !cellno || !email || !message) {
+  if (!name || !cellno || !email || !legalproblem) {
     return res.status(400).json({ error: 'Missing fields!' });
   }
 
@@ -18,7 +18,7 @@ app.post('/send-email', async (req, res) => {
     service: 'gmail',
     auth: {
       user: 'bayanda45jack@gmail.com',
-      pass: 'lmnjmvgydulywzai', // Use app password  lmnj mvgy duly wzai
+      pass: 'lssyz sbcy kjwf vtwe', // Use app password
     },
   });
 
@@ -27,7 +27,7 @@ app.post('/send-email', async (req, res) => {
     to: 'bayanda45jack@gmail.com', // Recipient
     replyTo: email,
     subject: `Legal issue from ${name}`,
-    text: `Name: ${name}\nCellno: ${cellno}\n\n${message}`,
+    text: `Name: ${name}\nCellno: ${cellno}\n\n${legalproblem}`,
   };
 
   try {
