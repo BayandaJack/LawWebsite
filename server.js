@@ -3,6 +3,7 @@ const nodemailer = require('nodemailer');
 const app = express();
 
 // Middleware to parse JSON and form data
+app.use(express.static(__dirname));
 app.use(express.json()); // For JSON data (if using fetch/axios)
 app.use(express.urlencoded({ extended: true })); // For HTML form submissions
 
@@ -15,15 +16,17 @@ app.post('/send-email', async (req, res) => {
   }
 
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'mail.jackattorneysinc.co.za',
+    port: 465,
+    secure: true,
     auth: {
-      user: 'bayanda45jack@gmail.com',
-      pass: 'lssyz sbcy kjwf vtwe', // Use app password
+      user: 'samson@jackattorneysinc.co.za',
+      pass: 'Jack@2024'//'hibp rzqp ojlv pkxq', // Use app password
     },
   });
 
   const mailOptions = {
-    from: `"${name}"`, // Sender name + email
+    from: email, // Sender name + email
     to: 'bayanda45jack@gmail.com', // Recipient
     replyTo: email,
     subject: `Legal issue from ${name}`,
@@ -33,6 +36,7 @@ app.post('/send-email', async (req, res) => {
   try {
     await transporter.sendMail(mailOptions);
     res.json({ success: true });
+    alert("Email sent sucessfully");
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Failed to send email' });
