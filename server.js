@@ -20,14 +20,14 @@ app.post('/send-email', async (req, res) => {
     port: 465,
     secure: true,
     auth: {
-      user: 'samson@jackattorneysinc.co.za',
-      pass: 'Jack@2024'//'hibp rzqp ojlv pkxq', // Use app password
+      user: 'law@jackattorneysinc.co.za',
+      pass: 'Samson@2021'//'hibp rzqp ojlv pkxq', // Use app password
     },
   });
 
   const mailOptions = {
     from: email, // Sender name + email
-    to: 'bayanda45jack@gmail.com', // Recipient
+    to: 'law@jackattorneysinc.co.za', // Recipient
     replyTo: email,
     subject: `Legal issue from ${name}`,
     text: `Name: ${name}\nCellno: ${cellno}\n\n${legalproblem}`,
@@ -36,7 +36,7 @@ app.post('/send-email', async (req, res) => {
   try {
     await transporter.sendMail(mailOptions);
     res.json({ success: true });
-    alert("Email sent sucessfully");
+    console.log("Email sent sucessfully");
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Failed to send email' });
