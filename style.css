@@ -85,7 +85,8 @@ h1 {
 
 /* Hero Section */
 .back {
-    height: 100vh;
+    min-height: 100vh;
+    padding-top: 140px; /* so it doesn’t hide behind the fixed header */
     background-image: url('./Justice_scale_with_lady.jpg');
     background-size: cover;
     background-position: center 5%;
@@ -97,7 +98,8 @@ h1 {
 
 /* Team Section */
 .teamcard {
-    height: 100vh;
+    min-height: 100vh;
+    padding-top: 140px; /* so it doesn’t hide behind the fixed header */
     background-image: url('./Light_back_justice_scale.jpg');
     background-size: cover;
     background-position: center 5%;
